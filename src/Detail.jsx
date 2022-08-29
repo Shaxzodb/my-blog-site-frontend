@@ -1,12 +1,17 @@
-import {memo} from 'react';
+import {memo,useEffect,useState} from 'react';
 import { DetailStyle } from './style/Detail-Style';
 //import data from './data';
 import { useParams } from 'react-router-dom';
 
 function Detail(props) {
   const { id } = useParams();
-  
-    const item = props.data.find(item => toString(item.id) === toString(id));
+    // console.log(props.data)
+
+    const item = props.data.find(item => {
+      console.log("Detail")
+      return item.id === id
+    });
+   
     return (
         <DetailStyle>
             {

@@ -1,9 +1,9 @@
-import { memo } from "react";
+import { memo,useEffect,useState, } from "react";
 import { RightStyle } from "./style/Right-Style";
   //import datat from "./data";
 import { Link } from "react-router-dom";
 function Right(props) {
-
+  console.log("Right")
   return (
     <RightStyle>
       <div className="arrow-up">
@@ -67,8 +67,6 @@ function Right(props) {
           })
  
       }
-
-
     </RightStyle>
   );
 }

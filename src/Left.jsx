@@ -3,6 +3,7 @@ import { LeftStyle } from "./style/Left-Style";
 import data from "./data";
 import {Link} from "react-router-dom";
 function Lift(props){
+  console.log("Left")
     return (
         <div className="sidebar-container">
             <LeftStyle>
@@ -13,7 +14,7 @@ function Lift(props){
             <img className="card-img-top" src={item.img} alt="" />
             <div className="card-body">
             <Link to={`/detail/${item.id}`} className="card-title">
-                <p>{item.titli}</p>
+                <p>{item.title}</p>
             </Link>
               
             </div>

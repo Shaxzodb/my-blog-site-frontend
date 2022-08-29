@@ -32,23 +32,25 @@ function App() {
             }
           `,
   }),
-}).then((res) => res.json())
-.then((data) => {
+  }).then((res) => res.json())
+  .then((data) => {
   //console.log(data.data.GetArticleData.articles);
   setData(data.data.GetArticleData.articles);
-}).catch((err) => {
+  }).catch((err) => {
   console.log(err);
-})
-  } , [data])
-  const obj =useMemo(()=>{
-    return data;
-  },[data])
+  })
+  } , [])
+  const obj=useMemo(()=>{
+    return data
+  })
+
   return (
     <div className="App">
       
       <header className="App-header">
         <nav>
           <Navbar />
+          
         </nav>
       </header>
       <BrowserRouter>

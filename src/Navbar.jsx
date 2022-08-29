@@ -2,6 +2,7 @@ import { memo } from "react";
 import { NavbarStyle } from "./style/Navbar-Style";
 
 function Navbar(proms) {
+    console.log("Navbar")
     return (
         <NavbarStyle>
             <div className="navbar-container">
